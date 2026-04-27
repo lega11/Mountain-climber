@@ -1,5 +1,6 @@
 # Mountain-climber
 🏔️ Mountain Peak Solver (Gradient-Based Search in C)
+
 📌 Overview
 
 This project implements a solution to the Mountain Search Problem, where the goal is to find the highest point (peak) in an unknown 2D landscape using limited visibility.
