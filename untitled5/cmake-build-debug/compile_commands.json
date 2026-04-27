@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/hp/CLionProjects/untitled5/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe -g -std=gnu11 -fdiagnostics-color=always -o CMakeFiles\\mountain_solver.dir\\gradient.c.obj -c C:\\Users\\hp\\CLionProjects\\untitled5\\gradient.c",
+  "file": "C:/Users/hp/CLionProjects/untitled5/gradient.c",
+  "output": "C:/Users/hp/CLionProjects/untitled5/cmake-build-debug/CMakeFiles/mountain_solver.dir/gradient.c.obj"
+},
+{
+  "directory": "C:/Users/hp/CLionProjects/untitled5/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe -g -std=gnu11 -fdiagnostics-color=always -o CMakeFiles\\mountain_solver.dir\\gradient_sol.c.obj -c C:\\Users\\hp\\CLionProjects\\untitled5\\gradient_sol.c",
+  "file": "C:/Users/hp/CLionProjects/untitled5/gradient_sol.c",
+  "output": "C:/Users/hp/CLionProjects/untitled5/cmake-build-debug/CMakeFiles/mountain_solver.dir/gradient_sol.c.obj"
+}
+]
