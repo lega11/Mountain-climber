@@ -1,7 +1,7 @@
 # Mountain-climber
-🏔️ Mountain Peak Solver (Gradient-Based Search in C)
+Mountain Peak Solver (Gradient-Based Search in C)
 
-📌 Overview
+Overview
 
 This project implements a solution to the Mountain Search Problem, where the goal is to find the highest point (peak) in an unknown 2D landscape using limited visibility.
 
@@ -12,25 +12,28 @@ generate_view(view, y, x);
 The objective is to locate the global maximum while minimizing the number of queries.
 
 
-🧠 Strategy
+Strategy
 
 The solution uses a gradient-based hill climbing approach with additional logic to handle tricky terrain such as plateaus and loops.
 
 Core Idea:
+
 Look at the current view
+
 Move toward the highest visible point
+
 Repeat until the peak is found
 
-⚙️ Features
+Features
 
 
-⛰️ 1. Gradient Climbing
+1. Gradient Climbing
 
 The algorithm scans the local view and moves toward the highest visible value.
 This efficiently follows the slope of the mountain.
 
 
-🟫 2. Plateau Handling
+2. Plateau Handling
 
 Plateaus (flat regions) are detected when:
 
@@ -41,51 +44,57 @@ It is not strictly higher than its neighbors
 To escape plateaus:
 
 First move forward
+
 Then move sideways
+
 Finally reset near the best-known location and try a new direction
 
-🧭 3. Direction Estimation
+3. Direction Estimation
 
 If no clear direction is available, the program:
 
 Compares averages of the edges of the view
 Infers which direction is uphill
 
-🔁 4. Loop Detection
+4. Loop Detection
 
 The program stores recent positions
 If it revisits the same positions, it detects a loop
 It then forces a directional change to escape
 
 
-📍 5. Best Point Tracking
+5. Best Point Tracking
 
 The highest altitude ever seen is always tracked
 If the search gets lost or goes out of bounds, it returns to this point
 
 
-🔍 6. Peak Validation
+6. Peak Validation
 
 The algorithm only calls declare_peak() when:
 The center is strictly higher than its neighbors
 This avoids wasting calls on plateaus
-🧪 Performance
+
+Performance
 Efficient search with low number of queries
 Handles large plateaus and noisy terrain
 Avoids infinite loops and excessive backtracking
 Performs consistently across multiple randomized landscapes
-🏗️ Project Structure
+Project Structure
 .
 ├── gradient.c        # Provided: landscape generator & evaluator
 ├── gradient.h        # Provided: definitions and API
 ├── gradient_sol.c    # Your solution (this project)
-└── README.md        
-🛠️ Compilation
+└── README.md 
+
+Compilation
 
 Compile using GCC:
 
 gcc gradient.c gradient_sol.c -lm -o gradient
-▶️ Running the Program
+
+Running the Program
+
 ./gradient
 
 This runs the performance_eval() function, which:
@@ -95,7 +104,7 @@ Outputs the number of queries used for each attempt
 Prints the average performance
 
 
-🐞 Debugging
+Debugging
 
 To test a specific failing case:
 
@@ -111,9 +120,12 @@ Print the full matrix using print_matrix()
 Print the path taken using user_path[]
 
 
-📚 Concepts Used
+Concepts Used
+
 Hill Climbing (Greedy Search)
+
 Plateau Detection & Escape
+
 Heuristic Direction Estimation
 Loop Detection
 Local Refinement
