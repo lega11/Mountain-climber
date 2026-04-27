@@ -66,25 +66,37 @@ It then forces a directional change to escape
 5. Best Point Tracking
 
 The highest altitude ever seen is always tracked
+
 If the search gets lost or goes out of bounds, it returns to this point
+
 
 
 6. Peak Validation
 
 The algorithm only calls declare_peak() when:
+
 The center is strictly higher than its neighbors
+
 This avoids wasting calls on plateaus
 
 Performance
+
 Efficient search with low number of queries
+
 Handles large plateaus and noisy terrain
+
 Avoids infinite loops and excessive backtracking
+
 Performs consistently across multiple randomized landscapes
+
 Project Structure
-.
+
 ├── gradient.c        # Provided: landscape generator & evaluator
+
 ├── gradient.h        # Provided: definitions and API
+
 ├── gradient_sol.c    # Your solution (this project)
+
 └── README.md 
 
 Compilation
